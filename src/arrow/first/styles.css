@@ -1,0 +1,43 @@
+.ui-arrow {
+	position: relative;
+	width: 30px;
+	height: 30px;
+	border: none;
+	background-color: transparent;
+}
+
+.ui-arrow:before,
+.ui-arrow:after {
+	content: '';
+	background-color: #2980b9;
+	position: absolute;
+	top: 50%;
+	width: 1px;
+	height: calc(70% - 1px);
+	margin-top: -35%;
+}
+
+.ui-arrow:before {
+	left: 50%;
+	margin-left: -25%;
+	transform: rotate(-45deg);
+}
+
+.ui-arrow:after {
+	right: 50%;
+	margin-right: -25%;
+	transform: rotate(45deg);
+}
+
+.ui-arrow:before,
+.ui-arrow:after {
+	transition: transform 0.34s ease;
+}
+
+.ui-arrow.is-active:before {
+	transform: rotate(45deg);
+}
+
+.ui-arrow.is-active:after {
+	transform: rotate(-45deg);
+}

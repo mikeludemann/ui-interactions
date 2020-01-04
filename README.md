@@ -1,2 +1,3 @@
-# ui-interactions
+# UI Interactions
+
 Some UI Interactions
