@@ -1,0 +1,46 @@
+.ui-toggle {
+	padding: 15px 25px;
+	color: #2eb929;
+	cursor: pointer;
+	border: solid 1px #2eb929;
+	font-size: 16px;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	transition: color 0.3s ease;
+}
+
+.ui-toggle:before,
+.ui-toggle:after {
+	top: 0;
+	position: absolute;
+	width: calc(50% + 21px);
+	height: 100%;
+	content: '';
+	background-color: #2eb929;
+	transition: transform 0.35s ease;
+	z-index: -1;
+}
+
+.ui-toggle:before {
+	left: 0;
+	transform: skewX(-20deg) translateX(calc(-100% - 20px));
+}
+
+.ui-toggle:after {
+	right: 0;
+	transform: skewX(-20deg) translateX(calc(100% + 20px));
+}
+
+.ui-toggle.is-active {
+	color: #fff;
+}
+
+.ui-toggle.is-active:before {
+	transform: skewX(-20deg) translateX(-20px);
+}
+
+.ui-toggle.is-active:after {
+	transform: skewX(-20deg) translateX(20px);
+}
+

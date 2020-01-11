@@ -1,0 +1,42 @@
+.ui-toggle {
+	padding: 15px 25px;
+	color: #2eb929;
+	cursor: pointer;
+	border: solid 1px #2eb929;
+	font-size: 16px;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	transition: color 0.3s ease;
+}
+
+.ui-toggle:before,
+.ui-toggle:after {
+	position: absolute;
+	content: '';
+	background-color: #2eb929;
+	width: 100%;
+	left: 0;
+	height: 50%;
+	transition: transform 0.3s ease;
+	z-index: -1;
+}
+
+.ui-toggle:before {
+	top: 0;
+	transform: translateY(-100%);
+}
+
+.ui-toggle:after {
+	bottom: 0;
+	transform: translateY(100%);
+}
+
+.ui-toggle.is-active {
+	color: #fff;
+}
+
+.ui-toggle.is-active:before,
+.ui-toggle.is-active:after {
+	transform: translateY(0);
+}
